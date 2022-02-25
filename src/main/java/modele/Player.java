@@ -32,6 +32,10 @@ public class Player {
 	public Player() {
 		super();
 	}
+	public Player(int idPlayer) {
+		super();
+		this.idPlayer = idPlayer;
+	}
 	
 	
 }

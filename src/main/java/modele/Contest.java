@@ -5,20 +5,20 @@ import java.util.Date;
 public class Contest {
 
 	private int idContest;
-	private int gameId;
+	private Game game;
 	private Date startDate;
-	private int idWinner;
+	private Player joueur;
 	public int getIdContest() {
 		return idContest;
 	}
 	public void setIdContest(int idContest) {
 		this.idContest = idContest;
 	}
-	public int getGameId() {
-		return gameId;
+	public Game getGame() {
+		return game;
 	}
-	public void setGameId(int gameId) {
-		this.gameId = gameId;
+	public void setGame(Game game) {
+		this.game = game;
 	}
 	public Date getStartDate() {
 		return startDate;
@@ -26,22 +26,23 @@ public class Contest {
 	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
-	public int getIdWinner() {
-		return idWinner;
+	public Player getJoueur() {
+		return joueur;
 	}
-	public void setIdWinner(int idWinner) {
-		this.idWinner = idWinner;
+	public void setJoueur(Player joueur) {
+		this.joueur = joueur;
 	}
-	public Contest(int idContest, int gameId, Date startDate, int idWinner) {
+	public Contest(int idContest, Game game, Date startDate, Player joueur) {
 		super();
 		this.idContest = idContest;
-		this.gameId = gameId;
+		this.game = game;
 		this.startDate = startDate;
-		this.idWinner = idWinner;
+		this.joueur = joueur;
 	}
 	public Contest() {
 		super();
 	}
+	
 	
 	
 	

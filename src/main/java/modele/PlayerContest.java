@@ -3,34 +3,38 @@ package modele;
 public class PlayerContest {
 
 	private int idPlayerContest;
-	private int idPlayer;
-	private int idContest;
+	private Player player;
+	private Contest contest;
 	public int getIdPlayerContest() {
 		return idPlayerContest;
 	}
 	public void setIdPlayerContest(int idPlayerContest) {
 		this.idPlayerContest = idPlayerContest;
 	}
-	public int getIdPlayer() {
-		return idPlayer;
+	public Player getPlayer() {
+		return player;
 	}
-	public void setIdPlayer(int idPlayer) {
-		this.idPlayer = idPlayer;
+	public void setPlayer(Player player) {
+		this.player = player;
 	}
-	public int getIdContest() {
-		return idContest;
+	public Contest getContest() {
+		return contest;
 	}
-	public void setIdContest(int idContest) {
-		this.idContest = idContest;
+	public void setContest(Contest contest) {
+		this.contest = contest;
 	}
-	public PlayerContest(int idPlayerContest, int idPlayer, int idContest) {
+	public PlayerContest(int idPlayerContest, Player player, Contest contest) {
 		super();
 		this.idPlayerContest = idPlayerContest;
-		this.idPlayer = idPlayer;
-		this.idContest = idContest;
+		this.player = player;
+		this.contest = contest;
 	}
 	public PlayerContest() {
 		super();
+	}
+	public PlayerContest(int idPlayerContest) {
+		super();
+		this.idPlayerContest = idPlayerContest;
 	}
 	
 	

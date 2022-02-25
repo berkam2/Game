@@ -13,3 +13,10 @@
 
 </head>
 <body>
+<div class="container" >
+
+    
+   <img alt="" src="image/imageJeux.jpeg">
+         
+ 
+</div>
