@@ -52,10 +52,11 @@ public class Vainqueur extends HttpServlet {
 		
 		Player p = new Player();
 		p.setIdPlayer(idPlayer);
+		c.setJoueur(p);
+		cDao.update(c);
 		
 		
-		
-		doGet(request, response);
+		response.sendRedirect("Details");
 	}
 
 }

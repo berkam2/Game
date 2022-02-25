@@ -112,7 +112,7 @@ public class ContestDao implements IDAO<Contest> {
 		boolean msg = false;
 		try {
 			PreparedStatement req = connect.prepareStatement("UPDATE contest SET winner_id=?"
-					+ " WHERE id=?");
+					+ " WHERE id_contest=?");
 			req.setInt(2, Object.getIdContest());
 			req.setInt(1,Object.getJoueur().getIdPlayer());
 			
