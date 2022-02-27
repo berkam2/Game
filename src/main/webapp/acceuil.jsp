@@ -19,9 +19,6 @@
 	<td><c:out value="${joueur.email}"></c:out></td>
 	<td><c:out value="${joueur.nickname}"></c:out></td>
 
-	<td> <a href="Edit?idPlayer=<c:out value='${joueur.idPlayer }'/>" class="btn btn-primary"> Modifier </a></td>
-	<td> <a href="Delete?idPlayer=<c:out value='${joueur.idPlayer }'/>" class="btn btn-primary"> Supprimer </a></td>
-	
 	
 	</tr>
 </tbody>
@@ -46,9 +43,6 @@
 	<td><c:out value="${jeux.title}"></c:out></td>
 	<td><c:out value="${jeux.minPlayers}"></c:out></td>
 	<td><c:out value="${jeux.maxPlayers}"></c:out></td>
-
-	<td> <a href="Edit?idGame=<c:out value='${jeux.idGame }'/>" class="btn btn-primary"> Modifier </a></td>
-	<td> <a href="Delete?idGame=<c:out value='${jeux.idGame }'/>" class="btn btn-primary"> Supprimer </a></td>
 	
 	
 	</tr>

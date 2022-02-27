@@ -7,24 +7,6 @@
 <h3><c:out value="${playerContest.startDate }"/></h3>
 
 
-<form action="<% request.getContextPath(); %> Details" method="post" > 
-			 
-                     <input type="hidden" value="${playerContest.idContest }" name="playerContest">
-                
-             
-             <label>Joueur <span class="color-red">*</span></label>
-            <div class="row margin-bottom-20">
-                 <select name="newPlayer">
-             <c:forEach items="${playerBanc}" var="joueur">
-                     <option value="<c:out value="${joueur.idPlayer}" />"> <c:out value="${joueur.nickname }"/></option>
-                     </c:forEach>
-                </select>
-             </div>
-               
-             <p>
-                 <button type="submit" class="btn btn-primary">Ajouter le Joueur à la partie</button>
-             </p>
-		</form>
 
 <table class="table caption-top">
 	<caption> Les joueurs du match</caption>
@@ -51,6 +33,7 @@
   </c:forEach> 
  	</table>
  	
+ 	
  	<c:if test="${nContest==playerContest.game.maxPlayers }">
  	Vous avez atteint le nombre joueur maximum
  	</c:if>
@@ -60,6 +43,26 @@
  	<c:if test="${nContest<playerContest.game.minPlayers }">
  	Vous ne disposez pas de suffisament de joueur pour lancer la partie
  	</c:if>
+ 	
+ 	<form action="<% request.getContextPath(); %> Details" method="post" > 
+			 
+                     <input type="hidden" value="${playerContest.idContest }" name="playerContest">
+                
+             
+             <label>Joueur <span class="color-red">*</span></label>
+            <div class="row margin-bottom-20">
+                 <select name="newPlayer">
+             <c:forEach items="${playerBanc}" var="joueur">
+                     <option value="<c:out value="${joueur.idPlayer}" />"> <c:out value="${joueur.nickname }"/></option>
+                     </c:forEach>
+                </select>
+             </div>
+               
+             <p>
+                 <button type="submit" class="btn btn-primary">Ajouter le Joueur à la partie</button>
+             </p>
+		</form>
+ 	
  	
  	<form action="<% request.getContextPath(); %> Vainqueur" method="post" > 
 			 

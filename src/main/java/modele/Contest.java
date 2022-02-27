@@ -1,6 +1,6 @@
 package modele;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Contest {
 
@@ -41,6 +41,20 @@ public class Contest {
 	}
 	public Contest() {
 		super();
+	}
+	public Contest(int idContest) {
+		super();
+		this.idContest = idContest;
+	}
+	public Contest(Game game, Date startDate, Player joueur) {
+		super();
+		this.game = game;
+		this.startDate = startDate;
+		this.joueur = joueur;
+	}
+	public void setStartDate(java.util.Date startDate2) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

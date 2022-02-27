@@ -5,6 +5,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,10 +25,9 @@ public class ContestDao implements IDAO<Contest> {
 		boolean msg = false;
 		PreparedStatement sql;
 		try {
-			sql = connect.prepareStatement("INSERT INTO contest (game_id,start_date,winner_id) VALUE (?,?,?)");
+			sql = connect.prepareStatement("INSERT INTO contest (game_id,start_date) VALUE (?,?)");
 			sql.setInt(1,Object.getGame().getIdGame());
-			sql.setDate(2, (Date) Object.getStartDate());
-			sql.setInt(3, Object.getJoueur().getIdPlayer());
+			sql.setDate(2, Object.getStartDate());
 			sql.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -22,17 +22,6 @@
                  </div>
              </div>
              
-             <label>Nom du gagnant <span class="color-red">*</span></label>
-            <div class="row margin-bottom-20">
-                  <select name="gagnant" class="form-control">
-                
-                <c:forEach items="${joueurs}" var="joueur">
-                <option value="<c:out value="${joueur.idPlayer}"/>"> <c:out value="${joueur.nickname}"/></option>
-                </c:forEach>
-                
-                </select>
-             </div>
-           
                
              <p>
                  <button type="submit" class="btn btn-primary">Ajouter le Match</button>
